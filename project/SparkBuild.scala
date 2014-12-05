@@ -261,7 +261,7 @@ object Assembly {
   lazy val settings = assemblySettings ++ Seq(
     test in assembly := {},
     jarName in assembly <<= (version, moduleName) map { (v, mName) => mName + "-"+v + "-hadoop" +
-      Option(System.getProperty("hadoop.version")).getOrElse("1.0.4") + ".jar" },
+      Option(System.getProperty("hadoop.version")).getOrElse("2.4.1") + ".jar" },
     mergeStrategy in assembly := {
       case PathList("org", "datanucleus", xs @ _*)             => MergeStrategy.discard
       case m if m.toLowerCase.endsWith("manifest.mf")          => MergeStrategy.discard
