@@ -211,7 +211,8 @@ cp -r "$FWDIR/ec2" "$DISTDIR"
 # Download and copy in tachyon, if requested
 if [ "$SPARK_TACHYON" == "true" ]; then
   TACHYON_VERSION="0.5.0"
-  TACHYON_URL="https://github.com/amplab/tachyon/releases/download/v${TACHYON_VERSION}/tachyon-${TACHYON_VERSION}-bin.tar.gz"
+  #TACHYON_URL="https://github.com/amplab/tachyon/releases/download/v${TACHYON_VERSION}/tachyon-${TACHYON_VERSION}-bin.tar.gz"
+  TACHYON_URL="https://s3.amazonaws.com/spark-package/hadoop-2.4.1/tachyon-${TACHYON_VERSION}-bin.tar.gz"
 
   TMPD=`mktemp -d 2>/dev/null || mktemp -d -t 'disttmp'`
 
